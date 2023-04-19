@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-out;
+  }
+  body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at bottom, #fff, transparent 80%),    
+    linear-gradient(to top, dodgerblue 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, rgba(#fff 0.4) 70%),
+    #1e90ff;  
+    animation: bg 20s infinite;
+    overflow: hidden;
+  }
+  @keyframes bg { /* Aqui voce pode mudar as cores do fundo */
+    0%, 100% { background-color: #59acff; }
+    25% { background-color: #97ffd4; }
+    50% { background-color: #ad8fff; }
+    75% { background-color: #ffa1d5; }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f7e4";
+    font-weight: 900;
+    font-size: 50vh;
+    opacity: 0;
+    top: 30vh;
+    left: 60vw;
+    width: 30vw;
+  }
+  .card {
+    display: flex;
+    justify-content: end;
+    width: 600px;
+    color: #fff; /* aqui voce pode mudar a cor do texto da sua descriçao */
+    text-align: right;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.56);
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur( 7.3px );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur( 7.3px );
+    z-index: 1;
+  }
+  .card-body {
+    width: 70%;
+  }
+  h5 {
+    opacity: .8;
+    color: black; /* aqui voce pode mudar a cor do seu nome */
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .socialbar {
+    border-radius: 3em;
+    width: 90%;
+    padding: 17px;
+    margin-top: 19px;
+    color: white;
+  }
+
+  .card a {
+    transition: 0.4s;
+    color: rgb(27, 27, 27); /* Aqui voce pode mudar a cor dos ícones */
+    ;
+  }
+  svg { /* Aqui voce muda o tamanho dos icones */
+    width: 50px;
+    height: 50px;
+  }
+  #rede1:hover { /* Quando voce passa o mouse em cima do icone, ele muda de cor, e é por causa disso aqui */
+    color: #c9510c;
+  }
+  
+  #rede2:hover {
+    color: #5d29d6;
+  }
+  
+  #rede3:hover {
+    color: #3b5998;
+  }
+  
+  #rede4:hover {
+    color: #00acee;
+  }
+  .card-img {
+    position: absolute;
+    width: 550px; /* aqui voce muda o tamanho da imagem */
+    top: -130px;
+    right: 250px;
+    box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.5);
+    z-index:1;
+    border-radius: 550px;
+    left: -40%;
+  }
+  .slowfloat {
+    animation: SlowFloat 1s infinite alternate;
+  }
+  @keyframes SlowFloat {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-10px);}
+  }
